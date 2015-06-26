@@ -1,0 +1,733 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY manuservice "http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:manuservice="http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#">
+    <Ontology rdf:about="http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice">
+        <rdfs:comment>This is ontology for cloud manufacturing</rdfs:comment>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#cdesign_has_cdesign -->
+
+    <ObjectProperty rdf:about="&manuservice;cdesign_has_cdesign">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;svc_has_process"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#ddesign_has_ddesign -->
+
+    <ObjectProperty rdf:about="&manuservice;ddesign_has_ddesign">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;svc_has_process"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#fair -->
+
+    <ObjectProperty rdf:about="&manuservice;fair">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;matching_level"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#good -->
+
+    <ObjectProperty rdf:about="&manuservice;good">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;matching_level"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#manu_has_CAPP -->
+
+    <ObjectProperty rdf:about="&manuservice;manu_has_CAPP">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;svc_has_process"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#manu_has_machining -->
+
+    <ObjectProperty rdf:about="&manuservice;manu_has_machining">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;svc_has_process"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#manu_has_postprocessing -->
+
+    <ObjectProperty rdf:about="&manuservice;manu_has_postprocessing">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;svc_has_process"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#matching_level -->
+
+    <ObjectProperty rdf:about="&manuservice;matching_level"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#process_has_resource -->
+
+    <ObjectProperty rdf:about="&manuservice;process_has_resource"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_has_process -->
+
+    <ObjectProperty rdf:about="&manuservice;svc_has_process">
+        <rdfs:range rdf:resource="&manuservice;process"/>
+        <rdfs:domain rdf:resource="&manuservice;service"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_has_resource -->
+
+    <ObjectProperty rdf:about="&manuservice;svc_has_resource"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#very_good -->
+
+    <ObjectProperty rdf:about="&manuservice;very_good">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;matching_level"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#depth_diameter_hole -->
+
+    <DatatypeProperty rdf:about="&manuservice;depth_diameter_hole">
+        <rdfs:domain rdf:resource="&manuservice;manufeature_hole"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#depth_hole -->
+
+    <DatatypeProperty rdf:about="&manuservice;depth_hole">
+        <rdfs:domain rdf:resource="&manuservice;manufeature_hole"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#diameter_hole -->
+
+    <DatatypeProperty rdf:about="&manuservice;diameter_hole">
+        <rdfs:domain rdf:resource="&manuservice;manufeature_hole"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#material_hole -->
+
+    <DatatypeProperty rdf:about="&manuservice;material_hole">
+        <rdfs:domain rdf:resource="&manuservice;manufeature_hole"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#surface_finish_hole -->
+
+    <DatatypeProperty rdf:about="&manuservice;surface_finish_hole">
+        <rdfs:domain rdf:resource="&manuservice;manufeature_hole"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#tolerance_hole -->
+
+    <DatatypeProperty rdf:about="&manuservice;tolerance_hole">
+        <rdfs:domain rdf:resource="&manuservice;manufeature_hole"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#tolerance_lower_deviation_hole -->
+
+    <DatatypeProperty rdf:about="&manuservice;tolerance_lower_deviation_hole"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#tolerance_upper_deviation_hole -->
+
+    <DatatypeProperty rdf:about="&manuservice;tolerance_upper_deviation_hole"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#type_hole -->
+
+    <DatatypeProperty rdf:about="&manuservice;type_hole">
+        <rdfs:domain rdf:resource="&manuservice;manufeature_hole"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#CoroDrill_880 -->
+
+    <Class rdf:about="&manuservice;CoroDrill_880">
+        <rdfs:subClassOf rdf:resource="&manuservice;dill_cutter"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#CoroDrill_Delta_C -->
+
+    <Class rdf:about="&manuservice;CoroDrill_Delta_C">
+        <rdfs:subClassOf rdf:resource="&manuservice;dill_cutter"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#CoroDrill_Delta_C_R840 -->
+
+    <Class rdf:about="&manuservice;CoroDrill_Delta_C_R840">
+        <rdfs:subClassOf rdf:resource="&manuservice;CoroDrill_Delta_C"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#CoroDrill_Delta_C_R840_Ecoolant -->
+
+    <Class rdf:about="&manuservice;CoroDrill_Delta_C_R840_Ecoolant">
+        <rdfs:subClassOf rdf:resource="&manuservice;CoroDrill_Delta_C_R840"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#CoroDrill_Delta_C_R840_Icoolant -->
+
+    <Class rdf:about="&manuservice;CoroDrill_Delta_C_R840_Icoolant">
+        <rdfs:subClassOf rdf:resource="&manuservice;CoroDrill_Delta_C_R840"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#CoroDrill_Delta_C_R841 -->
+
+    <Class rdf:about="&manuservice;CoroDrill_Delta_C_R841">
+        <rdfs:subClassOf rdf:resource="&manuservice;CoroDrill_Delta_C"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#Coromant_Delta -->
+
+    <Class rdf:about="&manuservice;Coromant_Delta">
+        <rdfs:subClassOf rdf:resource="&manuservice;dill_cutter"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#Coromant_U_R416.2 -->
+
+    <Class rdf:about="&manuservice;Coromant_U_R416.2">
+        <rdfs:subClassOf rdf:resource="&manuservice;dill_cutter"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#Coromant_U_R416.21 -->
+
+    <Class rdf:about="&manuservice;Coromant_U_R416.21">
+        <rdfs:subClassOf rdf:resource="&manuservice;dill_cutter"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#Plunge_drill -->
+
+    <Class rdf:about="&manuservice;Plunge_drill">
+        <rdfs:subClassOf rdf:resource="&manuservice;dill_cutter"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#T_MAX_U_R416.01 -->
+
+    <Class rdf:about="&manuservice;T_MAX_U_R416.01">
+        <rdfs:subClassOf rdf:resource="&manuservice;dill_cutter"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#T_MAX_U_R416.7 -->
+
+    <Class rdf:about="&manuservice;T_MAX_U_R416.7">
+        <rdfs:subClassOf rdf:resource="&manuservice;dill_cutter"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#T_MAX_U_R416.9 -->
+
+    <Class rdf:about="&manuservice;T_MAX_U_R416.9">
+        <rdfs:subClassOf rdf:resource="&manuservice;dill_cutter"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#aluminium -->
+
+    <Class rdf:about="&manuservice;aluminium">
+        <rdfs:subClassOf rdf:resource="&manuservice;material"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#boring_hole -->
+
+    <Class rdf:about="&manuservice;boring_hole">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufeature_hole"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#cast_iron -->
+
+    <Class rdf:about="&manuservice;cast_iron">
+        <rdfs:subClassOf rdf:resource="&manuservice;material"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#chamfer_drilling_hole -->
+
+    <Class rdf:about="&manuservice;chamfer_drilling_hole">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufeature_hole"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#computing_resource -->
+
+    <Class rdf:about="&manuservice;computing_resource">
+        <rdfs:subClassOf rdf:resource="&manuservice;hard_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#con_design -->
+
+    <Class rdf:about="&manuservice;con_design">
+        <rdfs:subClassOf rdf:resource="&manuservice;svc_design"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#cross_hole -->
+
+    <Class rdf:about="&manuservice;cross_hole">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufeature_hole"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#customer -->
+
+    <Class rdf:about="&manuservice;customer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#cutter -->
+
+    <Class rdf:about="&manuservice;cutter">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufacturing_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#detail_design -->
+
+    <Class rdf:about="&manuservice;detail_design">
+        <rdfs:subClassOf rdf:resource="&manuservice;svc_design"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#dill_cutter -->
+
+    <Class rdf:about="&manuservice;dill_cutter">
+        <rdfs:subClassOf rdf:resource="&manuservice;cutter"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#enterprise -->
+
+    <Class rdf:about="&manuservice;enterprise"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#general_hole -->
+
+    <Class rdf:about="&manuservice;general_hole">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufeature_hole"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#hard_resource -->
+
+    <Class rdf:about="&manuservice;hard_resource">
+        <rdfs:subClassOf rdf:resource="&manuservice;resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#hardened_steel -->
+
+    <Class rdf:about="&manuservice;hardened_steel">
+        <rdfs:subClassOf rdf:resource="&manuservice;material"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#knowledge -->
+
+    <Class rdf:about="&manuservice;knowledge">
+        <rdfs:subClassOf rdf:resource="&manuservice;soft_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#manufacturing_features -->
+
+    <Class rdf:about="&manuservice;manufacturing_features"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#manufacturing_resource -->
+
+    <Class rdf:about="&manuservice;manufacturing_resource">
+        <rdfs:subClassOf rdf:resource="&manuservice;hard_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#manufeature_hole -->
+
+    <Class rdf:about="&manuservice;manufeature_hole">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufacturing_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#material -->
+
+    <Class rdf:about="&manuservice;material">
+        <rdfs:subClassOf rdf:resource="&manuservice;hard_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#personnel -->
+
+    <Class rdf:about="&manuservice;personnel">
+        <rdfs:subClassOf rdf:resource="&manuservice;soft_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#plunge_drilling_hole -->
+
+    <Class rdf:about="&manuservice;plunge_drilling_hole">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufeature_hole"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#pro_condesign -->
+
+    <Class rdf:about="&manuservice;pro_condesign">
+        <rdfs:subClassOf rdf:resource="&manuservice;process"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#pro_dedesign -->
+
+    <Class rdf:about="&manuservice;pro_dedesign">
+        <rdfs:subClassOf rdf:resource="&manuservice;process"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#process -->
+
+    <Class rdf:about="&manuservice;process"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#radial_adjustment_hole -->
+
+    <Class rdf:about="&manuservice;radial_adjustment_hole">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufeature_hole"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#resource -->
+
+    <Class rdf:about="&manuservice;resource"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#service -->
+
+    <Class rdf:about="&manuservice;service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#soft_resource -->
+
+    <Class rdf:about="&manuservice;soft_resource">
+        <rdfs:subClassOf rdf:resource="&manuservice;resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#software -->
+
+    <Class rdf:about="&manuservice;software">
+        <rdfs:subClassOf rdf:resource="&manuservice;soft_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#stackdrilling_hole -->
+
+    <Class rdf:about="&manuservice;stackdrilling_hole">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufeature_hole"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#stainless_steel -->
+
+    <Class rdf:about="&manuservice;stainless_steel">
+        <rdfs:subClassOf rdf:resource="&manuservice;material"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#steel -->
+
+    <Class rdf:about="&manuservice;steel">
+        <rdfs:subClassOf rdf:resource="&manuservice;material"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#step_drilling_hole -->
+
+    <Class rdf:about="&manuservice;step_drilling_hole">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufeature_hole"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#super_alloys -->
+
+    <Class rdf:about="&manuservice;super_alloys">
+        <rdfs:subClassOf rdf:resource="&manuservice;material"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#surface_with_angle_hole -->
+
+    <Class rdf:about="&manuservice;surface_with_angle_hole">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufeature_hole"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_design -->
+
+    <Class rdf:about="&manuservice;svc_design">
+        <rdfs:subClassOf rdf:resource="&manuservice;service"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_job -->
+
+    <Class rdf:about="&manuservice;svc_job"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_job_design -->
+
+    <Class rdf:about="&manuservice;svc_job_design">
+        <rdfs:subClassOf rdf:resource="&manuservice;svc_job"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_job_manufacturing -->
+
+    <Class rdf:about="&manuservice;svc_job_manufacturing">
+        <rdfs:subClassOf rdf:resource="&manuservice;svc_job"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_job_manufacturing_unit -->
+
+    <Class rdf:about="&manuservice;svc_job_manufacturing_unit">
+        <rdfs:subClassOf rdf:resource="&manuservice;svc_job_manufacturing"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_job_test -->
+
+    <Class rdf:about="&manuservice;svc_job_test">
+        <rdfs:subClassOf rdf:resource="&manuservice;svc_job"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_manufacturing -->
+
+    <Class rdf:about="&manuservice;svc_manufacturing">
+        <rdfs:subClassOf rdf:resource="&manuservice;service"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_test -->
+
+    <Class rdf:about="&manuservice;svc_test">
+        <rdfs:subClassOf rdf:resource="&manuservice;service"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#trepanning_hole -->
+
+    <Class rdf:about="&manuservice;trepanning_hole">
+        <rdfs:subClassOf rdf:resource="&manuservice;manufeature_hole"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#ConceptDesign -->
+
+    <NamedIndividual rdf:about="&manuservice;ConceptDesign">
+        <rdf:type rdf:resource="&manuservice;con_design"/>
+        <manuservice:cdesign_has_cdesign rdf:resource="&manuservice;p_conceptualdesign"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#holeA -->
+
+    <NamedIndividual rdf:about="&manuservice;holeA">
+        <rdf:type rdf:resource="&manuservice;general_hole"/>
+        <manuservice:surface_finish_hole rdf:datatype="&xsd;float">1.6</manuservice:surface_finish_hole>
+        <manuservice:diameter_hole rdf:datatype="&xsd;float">18.0</manuservice:diameter_hole>
+        <manuservice:depth_diameter_hole rdf:datatype="&xsd;float">2.7</manuservice:depth_diameter_hole>
+        <manuservice:depth_hole rdf:datatype="&xsd;float">48.0</manuservice:depth_hole>
+        <manuservice:tolerance_hole rdf:datatype="&xsd;int">8</manuservice:tolerance_hole>
+        <manuservice:type_hole rdf:datatype="&xsd;string">general_hole</manuservice:type_hole>
+        <manuservice:material_hole rdf:datatype="&xsd;string">stainless_steel</manuservice:material_hole>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#machine -->
+
+    <NamedIndividual rdf:about="&manuservice;machine">
+        <rdf:type rdf:resource="&manuservice;manufacturing_resource"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#p_conceptualdesign -->
+
+    <NamedIndividual rdf:about="&manuservice;p_conceptualdesign">
+        <rdf:type rdf:resource="&manuservice;pro_condesign"/>
+        <manuservice:process_has_resource rdf:resource="&manuservice;machine"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY manuservice "http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:manuservice="http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#">
+    <Ontology rdf:about="http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice">
+        <rdfs:comment>This is ontology for cloud manufacturing</rdfs:comment>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#cdesign_has_cdesign -->
+
+    <ObjectProperty rdf:about="&manuservice;cdesign_has_cdesign">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;svc_has_process"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#ddesign_has_ddesign -->
+
+    <ObjectProperty rdf:about="&manuservice;ddesign_has_ddesign">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;svc_has_process"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#manu_has_CAPP -->
+
+    <ObjectProperty rdf:about="&manuservice;manu_has_CAPP">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;svc_has_process"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#manu_has_machining -->
+
+    <ObjectProperty rdf:about="&manuservice;manu_has_machining">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;svc_has_process"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#manu_has_postprocessing -->
+
+    <ObjectProperty rdf:about="&manuservice;manu_has_postprocessing">
+        <rdfs:subPropertyOf rdf:resource="&manuservice;svc_has_process"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#process_has_resource -->
+
+    <ObjectProperty rdf:about="&manuservice;process_has_resource">
+        <rdfs:domain rdf:resource="&manuservice;process"/>
+        <rdfs:range rdf:resource="&manuservice;resource"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_has_process -->
+
+    <ObjectProperty rdf:about="&manuservice;svc_has_process">
+        <rdfs:range rdf:resource="&manuservice;process"/>
+        <rdfs:domain rdf:resource="&manuservice;service"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_has_resource -->
+
+    <ObjectProperty rdf:about="&manuservice;svc_has_resource"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#computing_resource -->
+
+    <Class rdf:about="&manuservice;computing_resource">
+        <rdfs:subClassOf rdf:resource="&manuservice;hard_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#con_design -->
+
+    <Class rdf:about="&manuservice;con_design">
+        <rdfs:subClassOf rdf:resource="&manuservice;svc_design"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#detail_design -->
+
+    <Class rdf:about="&manuservice;detail_design">
+        <rdfs:subClassOf rdf:resource="&manuservice;svc_design"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#hard_resource -->
+
+    <Class rdf:about="&manuservice;hard_resource">
+        <rdfs:subClassOf rdf:resource="&manuservice;resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#knowledge -->
+
+    <Class rdf:about="&manuservice;knowledge">
+        <rdfs:subClassOf rdf:resource="&manuservice;soft_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#manufacturing_resource -->
+
+    <Class rdf:about="&manuservice;manufacturing_resource">
+        <rdfs:subClassOf rdf:resource="&manuservice;hard_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#material -->
+
+    <Class rdf:about="&manuservice;material">
+        <rdfs:subClassOf rdf:resource="&manuservice;hard_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#personnel -->
+
+    <Class rdf:about="&manuservice;personnel">
+        <rdfs:subClassOf rdf:resource="&manuservice;soft_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#pro_condesign -->
+
+    <Class rdf:about="&manuservice;pro_condesign">
+        <rdfs:subClassOf rdf:resource="&manuservice;process"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#pro_dedesign -->
+
+    <Class rdf:about="&manuservice;pro_dedesign">
+        <rdfs:subClassOf rdf:resource="&manuservice;process"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#process -->
+
+    <Class rdf:about="&manuservice;process"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#resource -->
+
+    <Class rdf:about="&manuservice;resource"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#service -->
+
+    <Class rdf:about="&manuservice;service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#soft_resource -->
+
+    <Class rdf:about="&manuservice;soft_resource">
+        <rdfs:subClassOf rdf:resource="&manuservice;resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#software -->
+
+    <Class rdf:about="&manuservice;software">
+        <rdfs:subClassOf rdf:resource="&manuservice;soft_resource"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_design -->
+
+    <Class rdf:about="&manuservice;svc_design">
+        <rdfs:subClassOf rdf:resource="&manuservice;service"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_manufacturing -->
+
+    <Class rdf:about="&manuservice;svc_manufacturing">
+        <rdfs:subClassOf rdf:resource="&manuservice;service"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#svc_test -->
+
+    <Class rdf:about="&manuservice;svc_test">
+        <rdfs:subClassOf rdf:resource="&manuservice;service"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#ConceptDesign -->
+
+    <NamedIndividual rdf:about="&manuservice;ConceptDesign">
+        <rdf:type rdf:resource="&manuservice;con_design"/>
+        <manuservice:cdesign_has_cdesign rdf:resource="&manuservice;p_conceptualdesign"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#machine -->
+
+    <NamedIndividual rdf:about="&manuservice;machine">
+        <rdf:type rdf:resource="&manuservice;manufacturing_resource"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yuqianlu/ontologies/2013/10/manuservice#p_conceptualdesign -->
+
+    <NamedIndividual rdf:about="&manuservice;p_conceptualdesign">
+        <rdf:type rdf:resource="&manuservice;pro_condesign"/>
+        <manuservice:process_has_resource rdf:resource="&manuservice;machine"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
